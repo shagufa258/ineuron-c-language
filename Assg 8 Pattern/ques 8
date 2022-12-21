@@ -1,4 +1,4 @@
-print tghe pattern-
+print the pattern-
 *********
  *******
   *****
@@ -6,16 +6,15 @@ print tghe pattern-
     *
 
 
-
 #include <stdio.h>
 void num(int n);
 int main()
-{int i,j;
-    for(i=1;i<=6;i++)
+{int i,j, num=7;
+    for(i=1;i<=num;i++)
     {
-        for(j=1;j<=9;j++)
+        for(j=1;j<=num*2-1;j++)
         {
-            if(j>=i && j<=10-i)
+            if(j>=i && j<=num*2-i)
             {
                 printf("*");
                 
