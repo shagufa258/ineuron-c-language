@@ -1,0 +1,31 @@
+/*8. Write a function to calculate the number of arrangements one can make from n items
+and r selected at a time. (TSRS)*/
+
+
+#include <stdio.h>
+int fact(int num);
+int p(int n, int r);
+
+int main()
+{  
+    printf("factorial= %d\n",fact(5));
+    printf("permutation =%d",p(5,3));
+
+    return 0;
+}
+
+
+int fact(int num)
+{  if(num==1){
+    return 1;
+} 
+   return num*fact(num-1);
+   
+}
+
+int p(int n, int r)
+
+{
+    return fact(n)/fact(n-r);
+    
+}
