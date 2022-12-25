@@ -1,0 +1,22 @@
+/*5. Write a function to print first N odd natural numbers. (TSRN)*/
+
+#include <stdio.h>
+int naturalNum(int num);
+int i;
+
+int main()
+
+
+{   naturalNum(10);
+
+    return 0;
+}
+
+int naturalNum(int num)
+{
+    
+   for(i=1;i<=num;i++)
+   {
+       printf("%d\n",2*i-1);
+   }
+}
