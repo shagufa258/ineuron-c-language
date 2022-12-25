@@ -6,6 +6,7 @@ For the first 50 units Rs. 0.50/unit
 For the next 100 units Rs. 0.75/unit
 For the next 100 units Rs. 1.20/unit
 For units above 250 Rs. 1.50/unit
+An additional surcharge of 20% is added to the bill.
 
 *******************************************************************************/
 
@@ -23,7 +24,7 @@ int main()
                 case 1:switch(unit>=250){
                     
                     case 1:printf("unit= %f", 220+(unit-250)*1.50);
-                    goto a;
+                    break;
                     
                     case 0:printf("unit= %f", 100+(unit-150)*1.20);
                         break;
@@ -37,7 +38,10 @@ int main()
         case 0:printf("bill= %f",unit*0.25);
         break;
     }
-    a:
+    
+    bill+=bill*0.2;
+    printf("adding 20% tax, Total amount= %f",bill);
+ 
 
     return 0;
 }
