@@ -1,0 +1,28 @@
+/*1. Write a function to calculate LCM of two numbers. (TSRS)*/
+
+
+#include <stdio.h>
+int LCM(int n1, int n2);
+int x;
+
+int main()
+{
+    LCM(12,22);
+
+    return 0;
+}
+
+int LCM(int n1, int n2)
+{   x=1;
+       
+    while(1){
+        if((x%n1==0)&&(x%n2==0))
+            {printf("%d",x);
+            break;}
+        else
+            x++;
+        
+        
+    }
+    
+}
