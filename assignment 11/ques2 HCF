@@ -1,0 +1,30 @@
+/*2. Write a function to calculate HCF of two numbers. (TSRS)*/
+
+#include <stdio.h>
+int LCM(int n1, int n2);
+int x, min;
+
+int main()
+{
+    LCM(36,24);
+
+    return 0;
+}
+
+int LCM(int n1, int n2)
+
+{  min=n1<n2?n1:n2;
+    
+    x=min;
+       
+    while(1){
+        if((n1%x==0)&&(n2%x==0))
+            {printf("%d",x);
+            break;}
+        else
+            x--;
+        
+        
+    }
+    
+}
