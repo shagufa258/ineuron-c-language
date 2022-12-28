@@ -1,4 +1,4 @@
-/*1. Write a function to calculate LCM of two numbers. (TSRS)*/
+/*1. Write a recursive function to print first N natural numbers*/
 
 #include<stdio.h>
 int num(int);
