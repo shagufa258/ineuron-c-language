@@ -1,0 +1,46 @@
+/*Write a function to print all Prime numbers between two given numbers. (TSRN)*/
+
+
+#include <stdio.h>
+int prime(int n);
+void prime_in_range(int number1, int number2);
+int main()
+{
+  //next_prime(12);
+ // printf("%d",prime(14
+ prime_in_range(1,24);
+
+    return 0;
+}
+
+int prime(int n)
+
+{   if(n==1 ||n==2)
+        return 1;
+    if(n==0)
+          return 0;
+        
+        
+    for(int i=2; i<n;i++)
+    {
+        if (n%i==0)
+           return 0;
+           
+        else if(i==n-1)
+        
+            return 1;     
+       
+    }
+}
+    void prime_in_range(int number1, int number2)
+    {
+        for(int j=number1; j<number2;j++)
+        
+        {   int x=prime(j);
+           if(x)
+           {
+               printf("%d, ",j);
+           }
+        }
+    }
+        
