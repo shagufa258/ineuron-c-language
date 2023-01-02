@@ -1,0 +1,33 @@
+/*5. Write a program to find the smallest number stored in an array of size 10. Take array
+values from the user.*/
+
+
+#include <stdio.h>
+
+int main()
+{int n,a[100], min;
+     printf("enter size of array");
+    scanf("%d",&n);
+     
+     
+     for(int i=0; i<n;i++)
+     {
+          scanf("%d",&a[i]);
+         
+     }
+     min=a[0];
+     
+     for(int i=0; i<n;i++)
+     {
+       
+       
+          printf("%d ",a[i]);
+          if(a[i]<a[0])
+           min=a[i];
+        
+     }
+    
+      printf("\nMin =%d ",min);
+   
+     return 0;
+}
