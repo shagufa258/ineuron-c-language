@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+void bin(int n);
+int main()
+{
+     bin(9);
+
+    return 0;
+}
+void bin(int n)
+{
+    if (n==0)
+        return;
+    bin(n>>1);    
+    printf("%d",n&1);
+    
+}
