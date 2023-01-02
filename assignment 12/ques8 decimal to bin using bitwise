@@ -15,3 +15,23 @@ void bin(int n)
     printf("%d",n&1);
     
 }
+
+//***********withouth bitwise************
+
+
+#include <stdio.h>
+void bin(int n);
+int main()
+{
+     bin(9);
+
+    return 0;
+}
+void bin(int n)
+{
+    if (n==0)
+        return;
+    bin(n/2);    
+    printf("%d",n%2);
+    
+}
