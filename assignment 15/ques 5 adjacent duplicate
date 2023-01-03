@@ -1,0 +1,39 @@
+/*5. Write a function to find the first occurrence of adjacent duplicate values in the array.
+Function has to return the value of the element.*/
+
+#include <stdio.h>
+
+int adj_duplicate(int a[]);
+int n=5;
+int main()
+{   int i,b[5]={5,3,4,2,5};
+    printf("ad = %d\n",adj_duplicate(b));
+
+    return 0;
+}
+
+int adj_duplicate(int a[])
+
+{
+    
+   
+   
+    for(int i=0; i<n-1;i++)
+     {  
+        if(a[i]==a[i+1]) 
+        {
+            return a[i];
+        }
+         
+         
+     }
+     
+     return 0;
+    
+//print
+
+    for(int i=0; i<n;i++)
+     {
+         printf("%d",a[i]);
+     }
+}
