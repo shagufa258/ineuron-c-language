@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{int i, j, largest, s_largest, n, a[100],b[100];
+  printf("size of array- ");
+  scanf("%d",&n);
+  for(i=0; i<n; i++)
+  {
+    scanf("%d",&a[i]);
+    
+  }
+  //finding 2nd largest
+  largest=a[0];
+  for(i=0;i<n;i++)
+  {
+      
+      if(a[i+1]>a[i]&& a[i+1]>largest)
+      { largest=a[i+1];
+      s_largest=a[i];}
+       printf("l= %d, ",largest);
+    printf(" SL= %d, ",s_largest);
+  
+  }
+  
+  
+   printf("\nl= %d, ",largest);
+    printf("\n SL= %d, ",s_largest);
+  
+  
+  
+  
+  
+//to print array-
+  printf("array a= ");
+ for(i=0; i<n;i++)
+  {
+        printf("%d, ",a[i]);
+       
+        
+  }
+ 
+
+    return 0;
+}
