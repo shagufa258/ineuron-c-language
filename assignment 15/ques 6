@@ -1,0 +1,40 @@
+/*6. Write a function in C to read n number of values in an array and display it in reverse
+order.*/
+#include <stdio.h>
+
+int duplicate(int a[]);
+int n=5, count=0;
+int main()
+{   int i,b[5]={5,2,4,2,2};
+    printf("duplicate = %d",duplicate(b));
+
+    return 0;
+}
+
+int duplicate(int a[])
+
+{
+    
+   
+   
+    for(int i=0; i<n-1;i++)
+     {  
+         for(int j=i+1; j<n;j++){
+        if(a[i]==a[j]) 
+        {
+           count++;
+        }
+         } 
+         
+     }
+    
+     
+     return count;
+    
+//print
+
+    for(int i=0; i<n;i++)
+     {
+         printf("%d",a[i]);
+     }
+}
