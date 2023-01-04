@@ -1,0 +1,28 @@
+/*6. Write a program in C to find the sum of rows and columns of a Matrix.*/
+
+#include <stdio.h>
+void transpose(int a[][3]) ;
+int main()
+{   int x[3][3]={1,5,3, 4,2,1, 2,5,2};
+    transpose(x);
+
+    return 0;
+}
+
+void transpose(int a[][3])
+{   int sum=0, C_sum=0;
+   for(int i=0; i<3;i++)
+     {
+    for(int j=0; j<3;j++) 
+      {
+        sum+=a[i][j]; 
+        C_sum+=a[j][i];
+      }
+      
+   printf("sum of row %d = %d\t", i, sum);
+   printf("sum of colum %d = %d\n", i, C_sum);
+   sum=0;
+   C_sum=0;
+    }
+      
+    }
