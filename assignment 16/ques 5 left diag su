@@ -1,0 +1,29 @@
+/*5. Write a program in C to find the sum of left diagonals of a matrix.*/
+
+#include <stdio.h>
+void transpose(int a[][3]) ;
+int main()
+{   int x[3][3]={1,5,3, 4,2,1, 1,5,3};
+    transpose(x);
+
+    return 0;
+}
+
+void transpose(int a[][3])
+{   int sum=0;
+   for(int i=0; i<3;i++)
+     {
+    for(int j=0; j<3;j++) 
+      {
+          if(i==j)
+         {
+          
+          sum+=a[i][j];
+          
+         }
+      }
+      
+   
+    }
+     printf("left diag sum = %d",sum); 
+    }
