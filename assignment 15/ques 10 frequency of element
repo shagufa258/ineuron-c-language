@@ -1,0 +1,26 @@
+/*10. Write a function in C to count the frequency of each element of an array.*/
+
+
+#include <stdio.h>
+void freq(int a[]);
+int main()
+    
+{   
+    int x[10]={0,1,55,9,4,6,52,55,1,4};
+    freq(x);
+    return 0;
+}
+
+void freq(int a[])
+{   int count=0, count_array[100]={0};//taking and array with all element zero for counting
+    for(int i=0; i<10; i++)
+    {
+        count_array[a[i]]+=1;
+    }
+    
+     for(int i=0; i<100; i++)//reading the count_array
+    {   if(count_array[i]!=0)//printing only non zero values
+        printf("freq of %d => %d\n",i,count_array[i]);
+    }
+    
+}
