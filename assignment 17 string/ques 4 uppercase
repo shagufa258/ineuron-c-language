@@ -1,0 +1,25 @@
+//4. Write a program to convert a given string into uppercase
+
+
+#include <stdio.h>
+void upper(char a[10]);
+int main()
+{
+char x[10]={'s','h','a','g','u','f','a'};
+upper(x);
+    
+}
+
+void upper(char a[10])
+{  int i=0;
+   while(a[i]!='\0')
+    {  
+        if( a[i]>='a' && a[i]<='z')
+        {a[i]-=32;
+        printf("%c", a[i]);
+        i++;}
+        
+
+        
+    }
+}
