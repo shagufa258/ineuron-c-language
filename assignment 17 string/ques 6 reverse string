@@ -1,0 +1,26 @@
+//6. Write a program to reverse a string.
+
+#include <stdio.h>
+void reverse_string(char a[]);
+int main()
+    
+{   
+    char x[10]={'s','h','a','g','u','f','a'};
+    reverse_string(x);
+    return 0;
+}
+
+void reverse_string(char a[])
+{
+    
+
+    for(int i=10; i>0; i--)
+    { 
+        printf("%c ",a[i]);
+    }
+    
+   
+    
+    
+    
+}
