@@ -1,0 +1,21 @@
+//4. Write a program to convert a given string into lowercase
+
+#include <stdio.h>
+void lower(char a[10]);
+int main()
+{
+char x[10]={'S','H','A','G','U','F','A'};
+lower(x);
+    
+}
+
+void lower(char a[10])
+{  int i=0;
+   while(a[i]!='\0')
+    {  
+        if( a[i]>='A' && a[i]<='Z')
+        {a[i]+=32;
+        printf("%c", a[i]);
+        i++;}
+    }
+}
