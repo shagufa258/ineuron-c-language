@@ -1,4 +1,6 @@
+/*10. Write a program in C to find the row with maximum number of 1s.*/
 
+//what if two rows has same number of 1s
 
 #include <stdio.h>
 void upper_tri(int a[3][3]) ;
