@@ -3,20 +3,20 @@ dimensional arrays, taken from the user.*/
 
 #include <stdio.h>
 #include <string.h>
-void vowel_count(char a[3][100]);//4 string and 101 character in each can be store
-
+void vowel_count(void);//4 string and 101 character in each can be store
+ 
 int main()
     
 {   
    
-    vowel_count(x);
+    vowel_count();
     return 0;
 }
 
 
 
-void vowel_count(char a[3][100])
-{
+void vowel_count(void)
+{char a[3][100];
  int count=0,total=0;
  
 //taking input from user
