@@ -1,0 +1,47 @@
+
+
+#include <stdio.h>
+#include <string.h>
+void search(void);
+char temp[100],a[30][30]={"haryana","mumbai","pune","kolkata","pune"};
+int main()
+    
+{   
+   
+    search();
+    return 0;
+}
+
+
+
+void search(void)
+{
+    int flag=0;
+ 
+//taking input from user
+printf("enter the string to search - ");
+scanf("%s",temp);
+
+ 
+
+    for(int i=0; i<5; i++)
+    
+   
+    {  
+        
+        if (strcmp(temp,a[i])==0)
+        {
+          printf("found at %d position\n",i);
+          flag=1;
+        }
+        
+        if(i==4&& flag==0) //if we reach to the end of string and still flag=0 then we will print not fond if we'll write  use only else then else will print in loop that is wrong
+        {
+           printf("not found") ;
+        }
+        
+    }
+    
+    
+    
+}
