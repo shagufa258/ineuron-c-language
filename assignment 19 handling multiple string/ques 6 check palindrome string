@@ -1,0 +1,62 @@
+//6. Write a program to print the strings which are palindrome in the list of strings.
+
+#include <stdio.h>
+#include <string.h>
+#define row 5 // don't write ; here
+#define col 20
+void search(void);//4 string and 101 character in each can be store
+char a[row][col]={"immi","madam","immi","kolkalok","yeey"};
+int main()
+    
+{   
+   
+    search();
+    return 0;
+}
+
+
+
+void search(void)
+{int flag=0,i=0,j=0, k=0;
+  
+
+ 
+
+    for(int k=0; k<row; k++)
+    {
+   
+     i=j;
+     j+=(strlen(a[k])-1);
+     // printf("i=%d j=%d\n",i,j) ;  
+    
+        while(i<=j){
+        if(a[k][i]==a[k][j])
+        {                       //if we will write printf here then how many time this loop will run statement wil print so good to not write here
+        j--;
+        i++;
+        
+        }
+        
+        if(a[k][i]!=a[k][j])
+         {break;}
+         
+         i++;
+         j--;
+        
+        
+    }
+    
+    if(i<j)
+        printf("%s is not palindrome\n",a[k]);
+        
+    else
+        printf("%s is palindrome\n",a[k]);
+        
+    i=0;
+    j=0;
+        
+    }
+    
+    
+    
+}
