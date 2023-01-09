@@ -1,0 +1,52 @@
+/*8. Given a list of words followed by two words, the task is to find the minimum distance
+between the given two words in the list of words.
+(Example : s = {“the”,”quick”,”brown”,”fox”,”quick”}
+word1 = “the”, word2 = “fox”, OUTPUT : 2 )*/
+
+
+#include <stdio.h>
+#include <string.h>
+#define row 10 // don't write ; here
+#define col 20
+void search(char b[row][col]);//4 string and 101 character in each can be store
+char temp[row][col] , a[row][col]={"my", "shagufa", "name" ,"is", "is", "name"};
+int main()
+    
+{   
+   
+    search(a);
+    return 0;
+}
+
+
+
+void search(char b[row][col])
+{char word1[10]="name", word2[10]="shagufa";
+int w1=-1, w2=-1, min=10000, temp; //we are not taking it 0 bcz our words may occur at 0 position
+ 
+    for(int i=0; i<row; i++)
+    {
+       if (strcmp(a[i],word1)==0)
+       {
+           w1=i;
+       }
+    
+       if (strcmp(a[i],word2)==0)
+       {
+           w2=i;
+       } 
+       
+         if (w1!=-1 && w2!=-1)   // we will take difference only when we found the words in array(if our indexes are updated)
+     {  
+          if((w2-w1)<0)
+            temp=(w2-w1)*-1;
+          else
+            temp=w2-w1;    
+          
+         if(temp<min)
+            min=temp;
+     }
+       
+    }
+  printf("difference= %d",min-1);
+}
