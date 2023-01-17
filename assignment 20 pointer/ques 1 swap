@@ -1,0 +1,22 @@
+//1. Write a function to swap values of two in variables of calling function.
+
+
+#include <stdio.h>
+void swap(int *p, int *q);
+int main()
+{   int el1=1, el2=2;
+    printf("before swapping - el1= %d  ele2= %d", el1, el2);
+    swap(&el1, &el2);// calling by reference
+    printf("\nafter swapping - el1= %d  ele2= %d", el1, el2);
+
+    return 0;
+}
+
+void swap(int *p, int *q)
+{
+    int temp;
+    temp=*p;
+    *p=*q;
+    *q=temp;
+    
+}
