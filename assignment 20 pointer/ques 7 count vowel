@@ -1,0 +1,36 @@
+//7. Write a program to count the number of vowels and consonants in a string using a
+pointer.
+
+
+
+#include <stdio.h>
+void count_vowel(char *p);
+int main()
+{   char s[100];
+    
+    printf("enter the string in lower case only - ");
+    scanf("%s", s);
+     
+   count_vowel(s);  //in case of array s and &s both are same
+
+    return 0;
+}
+
+void count_vowel(char *p)
+{
+   int count_v=0, count_c=0;
+   for(int i=0; *(p+i); i++)  //it will run upto null character
+   {
+      if(*(p+i)=='a'||*(p+i)=='e'||*(p+i)=='i'||*(p+i)=='o'||*(p+i)=='u')
+      {
+          count_v++;
+      }
+      
+      else
+        count_c++;
+   }
+   
+   printf("vowel= %d", count_v);
+    printf("\nconsonant= %d", count_c);
+        
+}
