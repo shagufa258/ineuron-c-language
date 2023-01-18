@@ -1,0 +1,27 @@
+//8. Write a program to compute the sum of all elements in an array using pointers.
+
+
+#include <stdio.h>
+void sum(int *p);
+int main()
+{   int arr[10]={1,5,5,6,7,2,1,7,9,3};
+    
+  
+     
+   sum(arr);  //in case of array s and &s both are same
+
+    return 0;
+}
+
+void sum(int *p)
+{
+   int sum=0;
+   for(int i=0; i<10; i++) 
+   {
+       sum=p[i]+sum;
+   }
+   
+   printf("sum= %d",sum);
+    
+        
+}
