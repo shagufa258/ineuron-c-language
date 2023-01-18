@@ -1,0 +1,27 @@
+//6. Write a program to calculate the length of the string using a pointer
+
+
+#include <stdio.h>
+void len(char *p);
+int main()
+{   char s[100];
+    
+    printf("enter the string");
+    scanf("%s", s);
+     
+   len(s);  //in case of array s and &s both are same
+
+    return 0;
+}
+
+void len(char *p)
+{
+   int count=0;
+   for(int i=0; *(p+i); i++)  //it will run upto null character
+   {
+       count++;
+   }
+   
+   printf("len= %d", count);
+        
+}
