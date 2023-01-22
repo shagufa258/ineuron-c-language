@@ -1,0 +1,31 @@
+/*1. Define a structure Employee with member variables id, name, salary
+2. Write a function to take input employee data from the user. [ Refer structure from
+question 1 ]
+3. Write a function to display employee data. [ Refer structure from question 1 ]*/
+
+#include <stdio.h>
+struct employee{
+    int id;
+    char name[30];
+    float salary;
+};
+
+struct employee input(struct employee a) //because its returning employee type of data
+{   
+    printf("enter id - ");
+    scanf("%d", &a.id);
+    printf("enter salary- ");
+    scanf("%f",& a.salary);
+    printf("enter name - ");
+    scanf("%s", a.name);
+    
+   // printf("id = %d  name=%s  salary=  %f", a.id, a.name, a.salary );
+    return a;
+}
+
+
+void display(struct employee x)  //returns nothing but take employee type argument
+{
+    printf("\ni am display function- \n");
+    printf("id = %d  name=%s  salary=  %f", x.id, x.name, x.salary);
+}
