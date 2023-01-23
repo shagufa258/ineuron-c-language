@@ -1,0 +1,62 @@
+/*10. Write a program to enter the marks of 5 students in Chemistry, Mathematics and
+Physics (each out of 100) using a structure named Marks having elements roll no.,
+name, chem_marks, maths_marks and phy_marks and then display the percentage
+of each student.*/
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int size;
+struct marks{
+    int roll;
+    char name[30];
+    int math_marks;
+    int phy_marks;
+    int chem_marks;
+};
+ struct marks input(int size)
+{ int i=0;
+    struct marks stu[10];
+   for(i=0; i<size; i++)
+   {
+    
+    printf("enter roll - ");
+    scanf("%d",& stu[i].roll);
+    
+    printf("enter name - ");
+    scanf("%s", stu[i].name);
+    
+   printf("enter math_marks");
+   scanf("%d",&stu[i].math_marks);
+   
+   printf("enter phy_marks");
+   scanf("%d",&stu[i].phy_marks);
+   
+   printf("enter chem_marks");
+   scanf("%d",&stu[i].chem_marks);
+   
+   
+   }  
+   
+   //calculate %
+   
+    for(i=0; i<size; i++)
+   {
+       
+       int temp;
+    temp=(stu[i]. math_marks+stu[i]. phy_marks+stu[i]. chem_marks  )/3 ;
+    printf("\nroll= %d  name=%s    math_marks= %d  phy_marks= %d chem_marks=%d per=%d",stu[i].roll,stu[i].name,stu[i].math_marks,stu[i].phy_marks,stu[i].chem_marks, temp);
+    
+   }
+   
+   
+}
+
+int main()
+{ 
+  input(3);
+}
+    
+
