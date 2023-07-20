@@ -37,3 +37,97 @@ int main()
     input(a1, 5);
    
 }
+
+
+
+#include<stdio.h>
+void func2();
+struct Employee* func1();
+struct Employee{
+        int id;
+        int salary;
+        char name[20];
+    };
+    
+struct Employee* func1()
+{
+    struct Employee e1, e2, e3;
+    struct Employee array1[10]; 
+    printf("enter id1");
+    scanf("%d",&e1.id);
+    scanf("%d",&e1.salary);
+    scanf("%s",e1.name);
+    
+    printf("enter id2");
+    scanf("%d",&e2.id);
+    scanf("%d",&e2.salary);
+    scanf("%s",e2.name);
+    
+    printf("enter id3");
+    scanf("%d",&e3.id);
+    scanf("%d",&e3.salary);
+    scanf("%s",e3.name);
+    array1[0]=e1;
+    array1[1]=e2;
+    return &array1; 
+    
+}
+
+void func2(struct Employee *x)
+{
+    for(int i=0; i<3; i++)
+    {
+    printf("\n%d",x.(e1.id);
+    printf("\n%d",*(x+i).salary);
+    printf("\n%s\n",*(x+i).name);
+    }
+}
+/*
+tried same ques by makin array of struct type [e1, e2, e3] where e1, e2, e3 are structure of emp type gtried to return this array to print in func 2, but in c we cant return 
+array, so used pointer now how to print each element of array not getting
+
+
+#include<stdio.h>
+void func2();
+struct Employee* func1();
+struct Employee{
+        int id;
+        int salary;
+        char name[20];
+    };
+    
+struct Employee* func1()
+{
+    struct Employee e1, e2, e3;
+    struct Employee array1[10]; 
+    printf("enter id1");
+    scanf("%d",&e1.id);
+    scanf("%d",&e1.salary);
+    scanf("%s",e1.name);
+    
+    printf("enter id2");
+    scanf("%d",&e2.id);
+    scanf("%d",&e2.salary);
+    scanf("%s",e2.name);
+    
+    printf("enter id3");
+    scanf("%d",&e3.id);
+    scanf("%d",&e3.salary);
+    scanf("%s",e3.name);
+    array1[0]=e1;
+    array1[1]=e2;
+    return &array1; 
+    
+}
+
+void func2(struct Employee *x)
+{
+    for(int i=0; i<3; i++)
+    {
+    printf("\n%d",x.(e1.id);
+    printf("\n%d",*(x+i).salary);
+    printf("\n%s\n",*(x+i).name);
+    }
+}
+
+*/
