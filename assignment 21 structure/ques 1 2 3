@@ -29,3 +29,10 @@ void display(struct employee x)  //returns nothing but take employee type argume
     printf("\ni am display function- \n");
     printf("id = %d  name=%s  salary=  %f", x.id, x.name, x.salary);
 }
+
+
+
+//Things I forgot while writing the same code after long time
+//1- %d in printf
+//2- used &name in scanf instead of name => scanf("%s",e1.name);
+//3- 
