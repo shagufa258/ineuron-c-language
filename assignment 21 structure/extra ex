@@ -1,0 +1,32 @@
+/******************************************************************************
+defining structure globally so here i dont hv to use pointer.
+always define func  before calling it (before main)
+*******************************************************************************/
+#include <stdio.h>
+struct employee input(struct employee);
+struct employee{
+    int id;
+    char name[20];
+    float salary;
+}e ;
+
+struct employee input(struct employee e)
+{
+   scanf("%d",&e.id);
+   scanf("%s",e.name);
+   scanf("%f",&e.salary);
+   
+    printf("%d",e.id);
+   printf("%s",e.name);
+   printf("%f",e.salary);
+   
+   return e;
+    
+}
+int main()
+{
+    
+    input(e);
+
+    return 0;
+}
